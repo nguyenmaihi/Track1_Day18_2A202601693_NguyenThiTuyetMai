@@ -26,7 +26,7 @@ export function OptionB({ onBack }: { onBack: () => void }) {
               <LearnerCard learner={learner} key={learner.id} top={<><span className="queue-number">{index + 1}</span><PriorityBadge value={learner.priority!} /></>}>
                 <div className="recommendation"><span>Khó khăn có thể gặp</span><strong>{learner.possibleDifficulty}</strong></div>
                 <ConfidenceBadge value={learner.confidence!} />
-                <ActionButton variant="secondary" onClick={() => setSelected(learner)}>Xem bằng chứng <span>→</span></ActionButton>
+                <ActionButton variant="secondary" onClick={() => setSelected(learner)}>Xem chi tiết <span>→</span></ActionButton>
               </LearnerCard>
             ))}
           </section>

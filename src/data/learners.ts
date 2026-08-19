@@ -42,4 +42,4 @@ export const supportQueue = ['linh', 'thu-ha', 'minh-anh']
 export const interventionSuggestions = ['linh', 'thu-ha']
 
 export const defaultMessage = (learner: Learner) =>
-  `Chào ${learner.name.split(' ').at(-1)}, mình thấy bạn có thể đang gặp khó khăn ở phần ${learner.topic}.\n\nBạn có muốn Trợ giảng hỗ trợ không?`
+  `Chào ${learner.name.split(' ').at(-1)}, mình thấy bạn có thể đang gặp khó khăn ở phần ${learner.topic}.\n\nBạn có muốn Lab Coach hỗ trợ không?`

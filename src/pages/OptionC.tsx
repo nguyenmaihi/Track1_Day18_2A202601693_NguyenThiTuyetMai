@@ -18,15 +18,15 @@ export function OptionC({ onBack }: { onBack: () => void }) {
 
   return (
     <main className="container">
-      <PrototypeHeader eyebrow="OPTION C · AI SUPPORT INTERVENTION" title="Đề xuất hỗ trợ của AI" description="AI đã chuẩn bị lời hỏi thăm riêng tư cho những học viên có thể cần hỗ trợ. Không nội dung nào được gửi khi chưa có sự phê duyệt của bạn." onBack={onBack} onReset={reset} />
+      <PrototypeHeader eyebrow="OPTION C · AI SUPPORT INTERVENTION" title="Đề xuất hỗ trợ của AI" description="AI đã chuẩn bị tin nhắn riêng tư cho những học viên có thể cần hỗ trợ. Không nội dung nào được gửi khi chưa có sự phê duyệt của bạn." onBack={onBack} onReset={reset} />
       {stage === 'list' && (
         <>
-          <div className="privacy-banner"><span>⌾</span><p><strong>Bạn là người kiểm soát</strong>Mọi lời hỏi thăm đều phải được bạn xem và phê duyệt trước khi gửi riêng tư.</p></div>
+          <div className="privacy-banner"><span>⌾</span><p><strong>Bạn là người kiểm soát</strong>Mọi tin nhắn hỗ trợ đều phải được bạn xem và phê duyệt trước khi gửi riêng tư.</p></div>
           <section className="learner-grid learner-grid--suggestions">
             {suggestions.map((learner) => (
               <LearnerCard learner={learner} key={learner.id}>
                 <div className="recommendation"><span>Khó khăn có thể gặp</span><strong>{learner.possibleDifficulty}</strong></div>
-                <div className="ready-label"><span>✓</span> Đã chuẩn bị lời hỏi thăm</div>
+                <div className="ready-label"><span>✓</span> Đã chuẩn bị tin nhắn</div>
                 <ActionButton variant="secondary" onClick={() => choose(learner)}>Xem lại <span>→</span></ActionButton>
               </LearnerCard>
             ))}
@@ -38,7 +38,7 @@ export function OptionC({ onBack }: { onBack: () => void }) {
           <button className="text-button" onClick={() => setStage('list')}>← Quay lại danh sách đề xuất</button>
           <div className="detail-identity"><span className="avatar avatar--large">{selected.initials}</span><div><h2>{selected.name}</h2><p>Khó khăn có thể gặp · {selected.possibleDifficulty}</p></div><span className="confidence-pill">Độ tin cậy: {selected.confidence === 'Medium' ? 'Trung bình' : 'Thấp'}</span></div>
           <h3>Dựa trên</h3><Evidence learner={selected} compact />
-          <h3>Lời hỏi thăm riêng tư được đề xuất</h3>
+          <h3>Tin nhắn riêng tư được đề xuất</h3>
           <div className="message-preview"><span className="private-label">Tin nhắn riêng tư</span><p>{message}</p></div>
           <button className="edit-button" onClick={() => setStage('edit')}>✎ Sửa tin nhắn</button>
           <div className="notice notice--privacy"><span>⌾</span><p>Không nội dung nào được gửi khi chưa có sự phê duyệt của bạn.</p></div>
@@ -50,7 +50,7 @@ export function OptionC({ onBack }: { onBack: () => void }) {
         <section className="detail-panel compact-panel"><button className="text-button" onClick={() => setStage('edit')}>← Quay lại chỉnh sửa</button><span className="result-icon">✓</span><h2>Sẵn sàng gửi</h2><p>Tin nhắn sẽ được gửi riêng tư tới <strong>{selected.name}</strong>.</p><div className="message-preview"><span className="private-label">Tin nhắn riêng tư</span><p>{message}</p></div><div className="actions"><ActionButton variant="secondary" onClick={() => setStage('review')}>Quay lại</ActionButton><ActionButton onClick={() => setStage('sent')}>Phê duyệt &amp; Gửi</ActionButton></div></section>
       )}
       {selected && ['sent', 'dismissed', 'later'].includes(stage) && (
-        <section className="result-panel"><span className="result-icon">{stage === 'dismissed' ? '×' : stage === 'later' ? '◷' : '✓'}</span><h2>{stage === 'sent' ? 'Đã gửi lời hỏi thăm riêng tư.' : stage === 'dismissed' ? 'Đã bỏ qua đề xuất.' : 'Đã lưu để xem sau.'}</h2><p>{stage === 'sent' ? `Tin nhắn mô phỏng đã được gửi riêng tư tới ${selected.name}.` : `Không có tin nhắn nào được gửi tới ${selected.name}.`}</p><ActionButton variant="secondary" onClick={() => setStage('list')}>Quay lại danh sách đề xuất</ActionButton></section>
+        <section className="result-panel"><span className="result-icon">{stage === 'dismissed' ? '×' : stage === 'later' ? '◷' : '✓'}</span><h2>{stage === 'sent' ? 'Đã gửi tin nhắn riêng tư.' : stage === 'dismissed' ? 'Đã bỏ qua đề xuất.' : 'Đã lưu để xem sau.'}</h2><p>{stage === 'sent' ? `Tin nhắn mô phỏng đã được gửi riêng tư tới ${selected.name}.` : `Không có tin nhắn nào được gửi tới ${selected.name}.`}</p><ActionButton variant="secondary" onClick={() => setStage('list')}>Quay lại danh sách đề xuất</ActionButton></section>
       )}
     </main>
   )
@@ -58,5 +58,5 @@ export function OptionC({ onBack }: { onBack: () => void }) {
 
 function EditMessage({ learner, value, onCancel, onSave }: { learner: Learner; value: string; onCancel: () => void; onSave: (value: string) => void }) {
   const [draft, setDraft] = useState(value)
-  return <section className="detail-panel"><button className="text-button" onClick={onCancel}>← Quay lại xem xét</button><div className="detail-identity"><span className="avatar avatar--large">{learner.initials}</span><div><h2>Sửa lời hỏi thăm riêng tư</h2><p>Gửi tới {learner.name}</p></div></div><label className="textarea-label" htmlFor="check-in">Tin nhắn</label><textarea id="check-in" rows={7} value={draft} onChange={(event) => setDraft(event.target.value)} /><p className="field-hint">Tin nhắn này vẫn ở chế độ riêng tư và sẽ không được gửi cho đến khi bạn phê duyệt.</p><div className="actions"><ActionButton variant="secondary" onClick={onCancel}>Hủy</ActionButton><ActionButton onClick={() => onSave(draft)} disabled={!draft.trim()}>Lưu &amp; Xem lại</ActionButton></div></section>
+  return <section className="detail-panel"><button className="text-button" onClick={onCancel}>← Quay lại xem xét</button><div className="detail-identity"><span className="avatar avatar--large">{learner.initials}</span><div><h2>Sửa tin nhắn riêng tư</h2><p>Gửi tới {learner.name}</p></div></div><label className="textarea-label" htmlFor="check-in">Tin nhắn</label><textarea id="check-in" rows={7} value={draft} onChange={(event) => setDraft(event.target.value)} /><p className="field-hint">Tin nhắn này vẫn ở chế độ riêng tư và sẽ không được gửi cho đến khi bạn phê duyệt.</p><div className="actions"><ActionButton variant="secondary" onClick={onCancel}>Hủy</ActionButton><ActionButton onClick={() => onSave(draft)} disabled={!draft.trim()}>Lưu &amp; Xem lại</ActionButton></div></section>
 }
