@@ -4,7 +4,7 @@
 
 - MHV: 2A202601693
 - Họ tên: Nguyễn Thị Tuyết Mai
-- Nhóm: FlyIn
+- Nhóm: Flaiiin
 - Thành viên: Lê Thị Linh
 - Case: AI Support Radar
 
@@ -42,7 +42,7 @@ AI chuẩn bị một lời hỏi thăm riêng tư dựa trên signals. Coach c�
 ## 5. Đóng góp của tôi trong nhóm
 
 - Xây dựng micro-prototype A/B với common context và learner fixture dùng chung.
-- Thể hiện các quyết định Human–AI trong prototype: Coach giữ final authority, Option A không suy luận, Option B giải thích recommendation và Option C không tự gửi can thiệp.
+- Thể hiện các quyết định Human–AI trong prototype: Coach giữ final authority, Option A không suy luận, Option B giải thích recommendation.
 - Phỏng vấn Lab Coach, ghi lại evidences.
 - Facilitate user test với Lab Coach, ghi lại lựa chọn, trade-off và observation để tham gia tổng hợp feedback.
 
