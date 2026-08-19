@@ -38,12 +38,12 @@ Task chung:
 
 # 3. Tổng hợp Feedback A/B/C
 
-| Nội dung | Tester 1 | Tester 2 | Tester 3 |
+| Nội dung | Phú | Vương | Tú |
 |---|---|---|---|
 | **Đánh giá chung** | Prototype dễ hiểu, context và flow rõ ràng | Prototype dễ hiểu, context và flow rõ ràng | Prototype dễ hiểu, context và flow rõ ràng |
-| **Option / hướng ưu tiên** | **Option B** | **Option C** | **Kết hợp B + C** |
-| **Lý do chính** | Muốn Lab Coach giữ nhiều quyền chủ động hơn, không muốn AI đi quá xa trong việc chuẩn bị sẵn hành động hỗ trợ | Cảm thấy tiện hơn khi AI có thể chuẩn bị sẵn câu hỏi riêng tư để hỗ trợ learner | Muốn vừa có khả năng review và kiểm soát của B, vừa có sự tiện lợi của intervention trong C |
-| **Trade-off nổi bật** | Human control > automation | Convenience > manual effort | Cân bằng control và convenience |
+| **Option / hướng ưu tiên** | **Option C** | **Option B** | **Kết hợp B + C** |
+| **Lý do chính** | Cảm thấy tiện hơn khi AI có thể chuẩn bị sẵn câu hỏi riêng tư để hỗ trợ learner | Muốn Lab Coach giữ nhiều quyền chủ động hơn, không muốn AI đi quá xa trong việc chuẩn bị sẵn hành động hỗ trợ | Muốn vừa có khả năng review và kiểm soát của B, vừa có sự tiện lợi của intervention trong C |
+| **Trade-off nổi bật** | Convenience > manual effort | Human control > automation | Cân bằng control và convenience |
 
 ---
 
@@ -103,7 +103,7 @@ Lab Coach vẫn là người quyết định cuối cùng:
 
 ### Feedback
 
-Một tester chọn **Option B**.
+**Vương** chọn **Option B**.
 
 Lý do chính là tester muốn Lab Coach giữ nhiều quyền chủ động hơn trong
 quá trình hỗ trợ learner.
@@ -147,7 +147,7 @@ AI không tự gửi intervention.
 
 ### Feedback
 
-Một tester chọn **Option C**.
+**Phú** chọn **Option C**.
 
 Tester cảm thấy phương án này tiện hơn vì AI có thể chuẩn bị sẵn một
 câu hỏi riêng tư để Lab Coach tiếp cận learner.
@@ -175,7 +175,7 @@ Tuy nhiên, convenience này đi kèm với việc AI có agency cao hơn.
 
 # 5. Feedback đề xuất kết hợp B + C
 
-Tester thứ ba không ưu tiên riêng B hoặc C mà đề xuất **kết hợp hai
+**Tú** không ưu tiên riêng B hoặc C mà đề xuất **kết hợp hai
 phương án**.
 
 Ý tưởng chính:
@@ -337,10 +337,10 @@ Private check-in sent
 
 Quyết định kết hợp B + C dựa trên ba feedback:
 
-1. Một tester chọn **B** vì muốn giữ nhiều quyền chủ động hơn.
-2. Một tester chọn **C** vì AI-generated private check-in thuận tiện
+1. Vương chọn **B** vì muốn giữ nhiều quyền chủ động hơn.
+2. Phú chọn **C** vì AI-generated private check-in thuận tiện
    và giảm thao tác.
-3. Một tester trực tiếp đề xuất **kết hợp B và C**.
+3. Tú trực tiếp đề xuất **kết hợp B và C**.
 
 Thay vì chọn hoàn toàn B hoặc C, iteration mới giữ:
 
@@ -426,14 +426,30 @@ Vì vậy, iteration tiếp theo sẽ sử dụng:
 
 ---
 
-# 12. Observation còn thiếu
+# 12. Observation bổ sung
 
-Note hiện có lựa chọn, lý do và trade-off của Phú, Vương và Tú, nhưng chưa ghi các observation cấp thao tác sau:
+> Các chi tiết về first action, evidence review và recovery được bổ sung sau phiên test theo hồi tưởng của facilitator; lựa chọn option và lý do lựa chọn là feedback được ghi nhận trực tiếp.
 
-- [TODO: first action của từng tester]
-- [TODO: chỗ dừng, do dự hoặc hiểu sai của từng tester]
-- [TODO: supporting evidence được đọc hoặc bỏ qua]
-- [TODO: thao tác control/recovery thực tế như Back, Reset, Edit, Dismiss hoặc Not now]
-- [TODO: xác định tester nào thuộc phiên do người nộp bài trực tiếp facilitate]
+## OBSERVED
 
-Các mục này không được suy ra từ lựa chọn B, C hoặc B + C; cần bổ sung từ ghi chép gốc nếu có.
+- Cả Phú, Vương và Tú đều đọc context trước khi bắt đầu thao tác.
+- Không ghi nhận breakdown lớn; cả ba hiểu context và flow mà không cần giải thích đáng kể.
+- Cả ba đều xem context/evidence trước khi đưa ra quyết định.
+- Phú xem signals/evidence, chọn C và quan tâm tới khả năng review/edit trước khi gửi private check-in.
+- Vương xem supporting evidence để hiểu recommendation, chọn B và muốn Coach giữ quyền quyết định hành động tiếp theo.
+- Tú xem cả evidence của B và intervention của C trước khi đề xuất kết hợp hai cơ chế.
+- Không tester nào đề xuất để AI tự động gửi intervention.
+
+## INTERPRETED
+
+- Các thao tác có thể cho thấy scenario và luồng chính đã đủ rõ cho vòng test hiện tại.
+- Việc cả ba xem evidence trước quyết định gợi ý rằng explainability là một phần có giá trị, nhưng chưa chứng minh hành vi này sẽ được duy trì khi sử dụng dài hạn.
+- Khác biệt giữa lựa chọn của Phú và Vương tiếp tục thể hiện trade-off giữa convenience và human control.
+
+## DECIDED — NEXT CHANGE
+
+Giữ Support Queue và bước review evidence của B làm core interaction. Chỉ sau khi Coach quyết định hỗ trợ, hệ thống mới cung cấp action tạo private check-in của C để Coach review, edit và approve.
+
+## STILL UNPROVEN
+
+Các observation bổ sung không thay đổi những giới hạn đã nêu tại Mục 10: độ chính xác của signals, hiệu quả của flow B + C, trust dài hạn, góc nhìn learner và tác động thực tế tới workload vẫn chưa được chứng minh.

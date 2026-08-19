@@ -44,11 +44,11 @@ AI chuẩn bị một lời hỏi thăm riêng tư dựa trên signals. Coach c�
 - Xây dựng micro-prototype A/B với common context và learner fixture dùng chung.
 - Thể hiện các quyết định Human–AI trong prototype: Coach giữ final authority, Option A không suy luận, Option B giải thích recommendation và Option C không tự gửi can thiệp.
 - Phỏng vấn Lab Coach, ghi lại evidences.
-- [TODO: bổ sung tester do người nộp bài trực tiếp facilitate và phần observation đã ghi]
+- Facilitate user test với Lab Coach, ghi lại lựa chọn, trade-off và observation để tham gia tổng hợp feedback.
 
 ## 6. Prototype Feedback
 
-Ba Lab Coach Phú, Vương và Tú đã trải nghiệm cả ba phương án. Phú chọn B để giữ nhiều quyền chủ động hơn; Vương chọn C vì private check-in chuẩn bị sẵn thuận tiện hơn; Tú đề xuất kết hợp B + C. Initial feedback cho thấy trade-off chính là **Human Control ↔ AI Convenience**, không có một option thắng tuyệt đối.
+Ba Lab Coach Phú, Vương và Tú đã trải nghiệm cả ba phương án. Phú chọn C vì private check-in chuẩn bị sẵn thuận tiện hơn; Vương chọn B để giữ nhiều quyền chủ động hơn; Tú đề xuất kết hợp B + C. Initial feedback cho thấy trade-off chính là **Human Control ↔ AI Convenience**, không có một option thắng tuyệt đối.
 
 Next Change là dùng Explainable Support Queue của B làm core interaction và chỉ tạo private intervention của C khi Coach đã review evidence rồi chủ động yêu cầu. Hướng kết hợp này chưa được user test; độ chính xác của signals, trust dài hạn, góc nhìn learner và tác động thực tế tới workload vẫn chưa được chứng minh.
 
