@@ -1,18 +1,21 @@
 # Prototype
 
-## Run locally
+## Prototype URL
+
+[Mở AI Support Radar Prototype](https://ai-support-radar-sooty.vercel.app/)
+
+
+## Chạy local
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite (usually `http://localhost:5173`).
-
-## Options
+## Các phương án
 
 - Option A — Signal Dashboard
 - Option B — Explainable Support Queue
 - Option C — AI Support Intervention
 
-Cả ba prototype đều sử dụng cùng một context và learner fixture. Không yêu cầu backend, external API, hay việc delivery message thực tế.
+Cả ba phương án sử dụng cùng user context, task và learner fixture. Prototype không yêu cầu backend, external API hoặc gửi tin nhắn thật.
